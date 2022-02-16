@@ -1,0 +1,48 @@
+.menu .items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  overflow: hidden;
+}
+
+.menu .items .item {
+  cursor: pointer;
+}
+
+.menu .menu-trigger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .menu .items {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 1;
+    overflow-y: auto;
+  }
+
+  .menu.ativo .items {
+    display: flex;
+  }
+
+  .menu .items .item {
+    width: 100%;
+  }
+
+  .menu .menu-trigger {
+    display: flex;
+  }
+
+  .menu .menu-trigger {
+    position: fixed;
+    bottom: 16px;
+    right: 24px;
+    cursor: pointer;
+    z-index: 2;
+  }
+}
